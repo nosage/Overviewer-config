@@ -28,6 +28,20 @@ def playerIcons(poi):
     if poi['id'] == 'Player':
         poi['icon'] = "http://overviewer.org/avatar/%s" % poi['EntityId']
         return "Last known location for %s" % poi['EntityId']
+		
+manualpoisList = [
+	{'id':'Structure','x':-211,'y':100,'z':120,'name':'the Castle'},
+	{'id':'Factory','x':-110,'y':100,'z':229,'name':'Iron Foundry'},
+	{'id':'Factory','x':46,'y':150,'z':188,'name':'the Lab'},
+	{'id':'Town','x':1785,'y':100,'z':814,'name':'Desert Village'}
+]		
+
+markerList = [
+	dict(name="Towns", filterFunction=townFilter, icon="icons/marker_town.png", checked=True),
+	dict(name="Factories", filterFunction=factoryFilter, icon="icons/marker_factory.png", checked=True),
+	dict(name="Structure", filterFunction=structureFilter, icon="icons/marker_tower.png", checked=True),
+	dict(name="Players", filterFunction=playerIcons, checked=True)
+]
 
 # Define where to put the output here.
 outputdir = "C:\wamp\www"
@@ -42,17 +56,8 @@ renders["render1"] = {
         'world': 'My World',
         'title': 'A regular render',
 		'showlocationmarker': False,
-		'manualpois':[
-			{'id':'Structure','x':-211,'y':100,'z':120,'name':'the Castle'},
-			{'id':'Factory','x':-110,'y':100,'z':229,'name':'Iron Foundry'},
-			{'id':'Factory','x':46,'y':150,'z':188,'name':'the Lab'},
-			{'id':'Town','x':1785,'y':100,'z':814,'name':'Desert Village'}
-			],
-		'markers':[
-			dict(name="Towns", filterFunction=townFilter, icon="icons/marker_town.png", checked=True),
-			dict(name="Factories", filterFunction=factoryFilter, icon="icons/marker_factory.png", checked=True),
-			dict(name="Structure", filterFunction=structureFilter, icon="icons/marker_tower.png", checked=True),
-			dict(name="Players", filterFunction=playerIcons, checked=True)]
+		'manualpois': manualpoisList,
+		'markers': markerList,
 }
 
 # This example is the same as above, but rotated
@@ -61,17 +66,8 @@ renders["render2"] = {
         'northdirection': 'upper-right',
         'title': 'Upper-right north direction',
 		'showlocationmarker': False,
-		'manualpois':[
-			{'id':'Structure','x':-211,'y':100,'z':120,'name':'the Castle'},
-			{'id':'Factory','x':-110,'y':100,'z':229,'name':'Iron Foundry'},
-			{'id':'Factory','x':46,'y':150,'z':188,'name':'the Lab'},
-			{'id':'Town','x':1785,'y':100,'z':814,'name':'Desert Village'}
-			],
-		'markers':[
-			dict(name="Towns", filterFunction=townFilter, icon="icons/marker_town.png", checked=True),
-			dict(name="Factories", filterFunction=factoryFilter, icon="icons/marker_factory.png", checked=True),
-			dict(name="Structure", filterFunction=structureFilter, icon="icons/marker_tower.png", checked=True),
-			dict(name="Players", filterFunction=playerIcons, checked=True)]
+		'manualpois': manualpoisList,
+		'markers': markerList,
 }
 
 # Here's how to do a nighttime render. Also try "smooth_night" instead of "night"
@@ -81,16 +77,7 @@ renders["render3"] = {
         # Notice how this overrides the rendermode default specified above
         'rendermode': 'night',
 		'showlocationmarker': False,
-		'manualpois':[
-			{'id':'Structure','x':-211,'y':100,'z':120,'name':'the Castle'},
-			{'id':'Factory','x':-110,'y':100,'z':229,'name':'Iron Foundry'},
-			{'id':'Factory','x':46,'y':150,'z':188,'name':'the Lab'},
-			{'id':'Town','x':1785,'y':100,'z':814,'name':'Desert Village'}
-			],
-		'markers':[
-			dict(name="Towns", filterFunction=townFilter, icon="icons/marker_town.png", checked=True),
-			dict(name="Factories", filterFunction=factoryFilter, icon="icons/marker_factory.png", checked=True),
-			dict(name="Structure", filterFunction=structureFilter, icon="icons/marker_tower.png", checked=True),
-			dict(name="Players", filterFunction=playerIcons, checked=True)]
+		'manualpois': manualpoisList,
+		'markers': markerList,
 }
 
