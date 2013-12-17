@@ -53,8 +53,8 @@ outputdir = "C:\wamp\www"
 rendermode = "lighting"
 
 renders["render1"] = {
-        'world': 'My World',
-        'title': 'A regular render',
+		'world': 'My World',
+		'title': 'A regular render',
 		'showlocationmarker': False,
 		'manualpois': manualpoisList,
 		'markers': markerList,
@@ -62,9 +62,9 @@ renders["render1"] = {
 
 # This example is the same as above, but rotated
 renders["render2"] = {
-        'world': 'My World',
-        'northdirection': 'upper-right',
-        'title': 'Upper-right north direction',
+		'world': 'My World',
+		'northdirection': 'upper-right',
+		'title': 'Upper-right north direction',
 		'showlocationmarker': False,
 		'manualpois': manualpoisList,
 		'markers': markerList,
@@ -72,10 +72,10 @@ renders["render2"] = {
 
 # Here's how to do a nighttime render. Also try "smooth_night" instead of "night"
 renders["render3"] = {
-        'world': 'My World',
-        'title': 'Nighttime',
-        # Notice how this overrides the rendermode default specified above
-        'rendermode': 'night',
+		'world': 'My World',
+		'title': 'Nighttime',
+		# Notice how this overrides the rendermode default specified above
+		'rendermode': 'night',
 		'showlocationmarker': False,
 		'manualpois': manualpoisList,
 		'markers': markerList,
